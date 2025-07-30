@@ -26,4 +26,4 @@ tsconfig.tsbuildinfo
 .turbo
 .vscode
 
-go-production-grade-boilerplate
+go-boilerplate
