@@ -33,8 +33,18 @@ func (j *JobService) handleWelcomeEmailTask(ctx context.Context, t *asynq.Task) 
 		p.FirstName,
 	)
 	if err != nil {
+		j.logger.Error().
+			Str("type", "welcome").
+			Str("to", p.To).
+			Err(err).
+			Msg("Failed to send welcome email")
 		return err
 	}
+
+	j.logger.Info().
+		Str("type", "welcome").
+		Str("to", p.To).
+		Msg("Successfully sent welcome email")
 
 	return nil
 }
