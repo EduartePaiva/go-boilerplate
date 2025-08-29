@@ -5,8 +5,12 @@ import (
 	"github.com/eduartepaiva/go-boilerplate/internal/service"
 )
 
-type Handlers struct{}
+type Handlers struct {
+	Health *HealthHandler
+}
 
 func NewHandlers(s *server.Server, services service.Services) *Handlers {
-	return &Handlers{}
+	return &Handlers{
+		Health: NewHealthHandler(s),
+	}
 }
