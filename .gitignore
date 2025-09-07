@@ -25,5 +25,3 @@ tsconfig.tsbuildinfo
 .env
 .turbo
 .vscode
-
-go-boilerplate
