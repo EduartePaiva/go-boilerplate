@@ -1,5 +1,5 @@
 {
-  "name": "go-boilerplate",
+  "name": "boilerplate",
   "version": "1.0.0",
   "scripts": {
     "build": "turbo run build",
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">=22"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": ["packages/*", "apps/*"],
   "devDependencies": {
     "turbo": "^2.5.5",
     "typescript": "^5.8.3"
